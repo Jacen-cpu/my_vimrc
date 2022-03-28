@@ -27,3 +27,12 @@ map <SPACE>j <C-w>h
 map <SPACE>l <C-w>l
 
 set backspace=indent,eol,start
+
+call plug#begin()
+Plug 'liuchengxu/space-vim-dark'
+call plug#end()
+
+colorscheme space-vim-dark
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
