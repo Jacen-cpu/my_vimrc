@@ -28,6 +28,7 @@ map <SPACE>l <C-w>l
 
 set backspace=indent,eol,start
 
+" Some Plugs
 call plug#begin('~/.vim/plugged')
 Plug 'liuchengxu/space-vim-dark'
 
