@@ -97,6 +97,12 @@ Plug 'fadein/vim-FIGlet'
 
 call plug#end()
 
+" ==
+" ==NERDtree
+" ==
+map tt :NERDTreeToggle<CR>
+
+
 colorscheme space-vim-dark
 hi Normal     ctermbg=NONE guibg=NONE
 hi LineNr     ctermbg=NONE guibg=NONE
