@@ -98,9 +98,22 @@ Plug 'fadein/vim-FIGlet'
 call plug#end()
 
 " ==
-" ==NERDtree
+" == NERDtree
 " ==
 map tt :NERDTreeToggle<CR>
+
+" ==
+" == Ycm
+" ==
+nnoremap gd: YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" ==
+" == ale
+" ==
+
+" ==
+" == Taglist
+" ==
 
 
 colorscheme space-vim-dark
