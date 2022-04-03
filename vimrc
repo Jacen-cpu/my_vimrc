@@ -28,6 +28,9 @@ map <SPACE>l <C-w>l
 
 set backspace=indent,eol,start
 
+" reload the vimrc
+map re :source ~/.vim/vimrc<CR>
+
 " Some Plugs
 call plug#begin('~/.vim/plugged')
 Plug 'liuchengxu/space-vim-dark'
@@ -101,6 +104,7 @@ call plug#end()
 " == NERDtree
 " ==
 map tt :NERDTreeToggle<CR>
+nnoremap ft :NERDTreeFind<CR>
 
 " ==
 " == Ycm
