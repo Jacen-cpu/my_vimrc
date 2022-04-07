@@ -110,7 +110,9 @@ nnoremap ft :NERDTreeFind<CR>
 " == Ycm
 " ==
 nnoremap gd: YcmCompleter GoToDefinitionElseDeclaration<CR>
-
+set previewpopup=height:10,width:60,highlight:PMenuSbar
+set completeopt+=popup
+set completepopup=height:15,width:60,border:off,highlight:PMenuSbar
 " ==
 " == ale
 " ==
