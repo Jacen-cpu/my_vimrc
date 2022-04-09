@@ -121,6 +121,9 @@ set completepopup=height:15,width:60,border:off,highlight:PMenuSbar
 " == Taglist
 " ==
 
+" ==
+" == Tagbar
+" ==
 
 colorscheme space-vim-dark
 hi Normal     ctermbg=NONE guibg=NONE
