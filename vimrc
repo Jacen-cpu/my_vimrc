@@ -28,6 +28,11 @@ map <SPACE>l <C-w>l
 
 set backspace=indent,eol,start
 
+colorscheme space-vim-dark
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
+
 " reload the vimrc
 map re :source ~/.vim/vimrc<CR>
 
@@ -37,8 +42,6 @@ Plug 'liuchengxu/space-vim-dark'
 
 Plug 'vim-airline/vim-airline'
 Plug 'connorholyday/vim-snazzy'
-
-
 
 " File navigation
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -124,8 +127,3 @@ set completepopup=height:15,width:60,border:off,highlight:PMenuSbar
 " ==
 " == Tagbar
 " ==
-
-colorscheme space-vim-dark
-hi Normal     ctermbg=NONE guibg=NONE
-hi LineNr     ctermbg=NONE guibg=NONE
-hi SignColumn ctermbg=NONE guibg=NONE
