@@ -28,10 +28,6 @@ map <SPACE>l <C-w>l
 
 set backspace=indent,eol,start
 
-colorscheme space-vim-dark
-hi Normal     ctermbg=NONE guibg=NONE
-hi LineNr     ctermbg=NONE guibg=NONE
-hi SignColumn ctermbg=NONE guibg=NONE
 
 " reload the vimrc
 map re :source ~/.vim/vimrc<CR>
@@ -102,6 +98,14 @@ Plug 'kana/vim-textobj-user'
 Plug 'fadein/vim-FIGlet'
 
 call plug#end()
+
+" ==
+" == scheme
+" ==
+colorscheme space-vim-dark
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
 
 " ==
 " == NERDtree
