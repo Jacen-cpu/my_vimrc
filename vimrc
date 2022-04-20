@@ -15,6 +15,7 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent
 set noexpandtab
+set scrolloff=5
 
 map sa :set splitright<CR>:vsplit<CR>
 map sd :set nosplitright<CR>:vsplit<CR>
@@ -31,6 +32,9 @@ set backspace=indent,eol,start
 
 " reload the vimrc
 map re :source ~/.vim/vimrc<CR>
+" the paste bug, the way to enter the paste mod
+map pp :set paste<CR>
+map pe :set nopaste<CR>
 
 " Some Plugs
 call plug#begin('~/.vim/plugged')
