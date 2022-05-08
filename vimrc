@@ -35,12 +35,14 @@ map re :source ~/.vim/vimrc<CR>
 " the paste bug, the way to enter the paste mod
 map pp :set paste<CR>
 map pe :set nopaste<CR>
-
+"vim-airline-theme
+let g:airline_theme='violet'
 " Some Plugs
 call plug#begin('~/.vim/plugged')
 Plug 'liuchengxu/space-vim-dark'
 
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'connorholyday/vim-snazzy'
 
 " File navigation
