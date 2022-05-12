@@ -35,6 +35,7 @@ map re :source ~/.vim/vimrc<CR>
 " the paste bug, the way to enter the paste mod
 map pp :set paste<CR>
 map pe :set nopaste<CR>
+set clipboard=unnamedplus
 "vim-airline-theme
 let g:airline_theme='violet'
 " Some Plugs
