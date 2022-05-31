@@ -1,14 +1,48 @@
+" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+"    _      ____  _                 _       __     _____ __  __ ____   ____
+"   / \    / ___|(_)_ __ ___  _ __ | | ___  \ \   / /_ _|  \/  |  _ \ / ___|
+"  / _ \   \___ \| | '_ ` _ \| '_ \| |/ _ \  \ \ / / | || |\/| | |_) | |
+" / ___ \   ___) | | | | | | | |_) | |  __/   \ V /  | || |  | |  _ <| |___
+"/_/   \_\ |____/|_|_| |_| |_| .__/|_|\___|    \_/  |___|_|  |_|_| \_\\____|
+"                            |_|
+" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+" Created by G1g4lo
+" simple and useful
+                            
+" highlight
 syntax on
+filetype plugin indent on
+" open the line number
 set number
+" show a line
 set cursorline
+
 set wrap
+
 set showcmd
+
 set wildmenu
+
+" highlight search
+set hlsearch
+map <CR> <nop>
+noremap <CR><CR> :nohlsearch<CR><CR>
+set incsearch
 
 noremap i k
 noremap k j
 noremap j h
 noremap h i
+
+noremap I 6k
+noremap K 6j
+
+" save and quit
+map s <nop>
+map S :w<CR>
+map Q :q<CR>
+map ! :q!<CR>
 
 set tabstop=4
 set softtabstop=4
@@ -29,15 +63,17 @@ map <SPACE>l <C-w>l
 
 set backspace=indent,eol,start
 
+" Spelling Check with <space>sc
+map <LEADER>sc :set spell!<CR>
 
 " reload the vimrc
-map re :source ~/.vim/vimrc<CR>
+map re :source $VIMRC<CR>
 " the paste bug, the way to enter the paste mod
 map pp :set paste<CR>
 map pe :set nopaste<CR>
 set clipboard=unnamedplus
 "vim-airline-theme
-let g:airline_theme='violet'
+let g:airline_theme="violet"
 " Some Plugs
 call plug#begin('~/.vim/plugged')
 Plug 'liuchengxu/space-vim-dark'
