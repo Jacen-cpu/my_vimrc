@@ -12,6 +12,7 @@
                             
 " highlight
 syntax on
+let &t_ut=''
 filetype plugin indent on
 " open the line number
 set number
@@ -24,12 +25,12 @@ set showcmd
 
 set wildmenu
 
-" highlight search
-set hlsearch
-map <CR> <nop>
-noremap <CR><CR> :nohlsearch<CR><CR>
-set incsearch
+" tabe
+map tn :tabe<CR>
+map tj :-tabnext<CR>
+map tl :+tabnext<CR>
 
+" key h j k l
 noremap i k
 noremap k j
 noremap j h
@@ -37,6 +38,8 @@ noremap h i
 
 noremap I 6k
 noremap K 6j
+
+noremap H I
 
 " save and quit
 map s <nop>
@@ -51,10 +54,17 @@ set autoindent
 set noexpandtab
 set scrolloff=5
 
-map sa :set splitright<CR>:vsplit<CR>
-map sd :set nosplitright<CR>:vsplit<CR>
-map se :set nosplitbelow<CR>:split<CR>
-map sf :set splitbelow<CR>:split<CR>
+" split the window
+map sl :set splitright<CR>:vsplit<CR>
+map sj :set nosplitright<CR>:vsplit<CR>
+map si :set nosplitbelow<CR>:split<CR>
+map sk :set splitbelow<CR>:split<CR>
+
+ map <up> :res +5<CR>
+ map <down> :res -5<CR>
+ map <left> :vertical resize-5<CR>
+ map <right> :vertical resize+5<CR>
+
 
 map <SPACE>i <C-w>k
 map <SPACE>k <C-w>j
