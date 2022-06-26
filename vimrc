@@ -112,8 +112,11 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 " Error checking
 Plug 'w0rp/ale'
 
-" ycm
-Plug 'ycm-core/YouCompleteMe'
+" coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" markdown
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
 
@@ -131,6 +134,21 @@ hi SignColumn ctermbg=NONE guibg=NONE
 map tt :NERDTreeToggle<CR>
 nnoremap ft :NERDTreeFind<CR>
 
+" >>> Coc <<<<
+
+let g:coc_global_extensions = ['coc-json', 'coc-vimlsp']
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 " >>> Airline <<<
 
 let g:airline#extensions#tabline#enabled = 1
@@ -144,10 +162,3 @@ endif
 
 let g:airline_symbols.linenr                   = ''
 let g:airline_symbols.maxlinenr                = ' '
-
-" >>== YouCompleteMe ==<<
-
-nnoremap gd: YcmCompleter GoToDefinitionElseDeclaration<CR>
-set previewpopup=height:10,width:60,highlight:PMenuSbar
-set completeopt+=popup
-set completepopup=height:15,width:60,border:off,highlight:PMenuSbar
