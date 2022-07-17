@@ -116,7 +116,7 @@ Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " markdown
-Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
 
@@ -179,3 +179,7 @@ endif
 
 let g:airline_symbols.linenr                   = ''
 let g:airline_symbols.maxlinenr                = ' '
+
+" >>> ale <<<
+let g:ale_linters = {'asm': ['i686-elf-gcc'], 'c': [], 'hs': ['glc']}
+
