@@ -90,6 +90,9 @@ map pp :set paste<CR>
 map pe :set nopaste<CR>
 set clipboard=unnamedplus
 
+" Control buffers
+
+map L :bd<CR>
 
 " >>> Amazing Plugs <<<
 call plug#begin('~/.vim/plugged')
@@ -125,6 +128,10 @@ call plug#end()
 " vim color
 
 colorscheme space-vim-dark
+
+hi Comment cterm=italic
+hi Comment guifg=#5C6370 ctermfg=59
+
 hi Normal     ctermbg=NONE guibg=NONE
 hi LineNr     ctermbg=NONE guibg=NONE
 hi SignColumn ctermbg=NONE guibg=NONE
@@ -181,5 +188,5 @@ let g:airline_symbols.linenr                   = ''
 let g:airline_symbols.maxlinenr                = ' '
 
 " >>> ale <<<
-let g:ale_linters = {'asm': ['i686-elf-gcc'], 'c': [], 'hs': ['glc']}
+let g:ale_linters = {'asm': ['i686-elf-gcc'], 'c': [], 'hs': ['glc'], 'h': []}
 
