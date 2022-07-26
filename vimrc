@@ -92,7 +92,9 @@ set clipboard=unnamedplus
 
 " Control buffers
 
-map L :bd<CR>
+map X  :bd<CR>
+map gj :bp<CR>
+map gl :bn<Cr>
 
 " >>> Amazing Plugs <<<
 call plug#begin('~/.vim/plugged')
@@ -108,9 +110,13 @@ Plug 'vim-airline/vim-airline'
 
 " File navigation
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'ryanoasis/vim-devicons'
 
 " Taglist
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
+ 
+" Bookmarks
+Plug 'kshenoy/vim-signature'
 
 " Error checking
 Plug 'w0rp/ale'
@@ -138,9 +144,31 @@ hi SignColumn ctermbg=NONE guibg=NONE
 
 " >>> NERDtree <<<
 
+" Order map
+
+"Use the natural Vim navigation keys hjkl to navigate the files.
+"Press o to open the file in a new buffer or open/close directory.
+"Press t to open the file in a new tab.
+"Press i to open the file in a new horizontal split.
+"Press s to open the file in a new vertical split.
+"Press p to go to parent directory.
+"Press r to refresh the current directory.
+"Press m to launch NERDTree menu inside Vim.
+
 map tt :NERDTreeToggle<CR>
 nnoremap ft :NERDTreeFind<CR>
+let NERDTreeMapOpenExpl = ""
+let NERDTreeMapUpdir = ""
+let NERDTreeMapUpdirKeepOpen = ""
+let NERDTreeMapOpenSplit = ""
+let NERDTreeOpenVSplit = ""
+let NERDTreeMapActivateNode = ""
+let NERDTreeMapOpenInTab = ""
+let NERDTreeMapPreview = ""
+let NERDTreeMapCloseDir = ""
+let NERDTreeMapChangeRoot = ""
 
+set encoding=UTF-8
 " >>> Coc <<<<
 
 let g:coc_global_extensions = ['coc-json', 'coc-vimlsp']
